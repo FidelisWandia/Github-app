@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#input-el{
+    margin: 50px 10px 10px 50px;
+    padding: 10px;
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    background: #f5f5dc;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+}
+
+#btn{
+    padding: 7px;
+    background: #daa520;
+    color: #7b3f00;
+    font-size: 1.0rem;
+    font-weight:bold;
+    border: none;
+    border-radius: 7px;
+}
+
+#container{
+    background: white;
+    display:flex;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+.user-info{
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
