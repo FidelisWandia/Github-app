@@ -34,14 +34,14 @@ body{
     height: 400px;
 }
 
-.user-info{
+.user-container{
     margin: 10px;
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5px;
 }
 
-#avatar{
+.avatar{
     width: 100px;
     height: 100px;
     border-radius: 50%;
