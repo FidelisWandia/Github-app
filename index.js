@@ -22,17 +22,23 @@ function renderUserInfo(data) {
 	const infoDiv = document.createElement("div");
 	const nameElement = document.createElement("h1");
 	const bioElement = document.createElement("p");
-	const blogElement = document.createElement("p");
+	const blogElement = document.createElement("a");
+	const deleteBtn = document.createElement("button");
 
+	deleteBtn.classList.add("delete-btn")
 	userDiv.classList.add("user-container");
 	imageElement.classList.add("avatar");
 	infoDiv.classList.add("user-info");
 
+	deleteBtn.innerHTML = "Delete User"
 	imageElement.src = avatar_url;
 	imageElement.alt = name;
 	nameElement.innerText = `Name: ${name}`;
 	bioElement.innerText = `Bio: ${bio}`;
-	blogElement.innerText = `Blog: ${blog}`;
+	blogElement.setAttribute("target", "_blank")
+	blogElement.href = blog
+	blogElement.innerText = "Link to my blog";
+
 
 	infoDiv.appendChild(nameElement);
 	infoDiv.appendChild(bioElement);
@@ -40,8 +46,12 @@ function renderUserInfo(data) {
 
 	userDiv.appendChild(imageElement);
 	userDiv.appendChild(infoDiv);
+	userDiv.appendChild(deleteBtn)
 
 	container.appendChild(userDiv);
+	deleteBtn.addEventListener("click", function(){
+		userDiv.remove()
+	})
 
 	inputEl.value = "";
 }
